@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:padding="10dp" >
 
     <!-- 录音页 -->
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="350dp"
         android:layout_gravity="center"
-        android:background="@drawable/record_border">
+        android:background="@drawable/record_border" >
 
-        <ImageView
+        <RelativeLayout
             android:id="@+id/layout1"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="140dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:background="@drawable/ic_audio_recoder_bg" />
+            android:background="#D1D1D1" >
+
+            <ImageView
+                android:id="@+id/ivRecord"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/chat_icon_voice1" />
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/layout2"
@@ -27,7 +37,7 @@
             android:layout_below="@id/layout1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:gravity="center">
+            android:gravity="center" >
 
             <Chronometer
                 android:id="@+id/chRecord"
@@ -45,51 +55,30 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_below="@id/layout2"
-            android:layout_marginTop="10dp"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/btn_play"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/ic_recoder_play" />
+            android:gravity="center" >
 
             <ImageButton
                 android:id="@+id/btnPause"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="83dp"
+                android:layout_height="83dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/ic_recoder_start" />
+                android:background="@drawable/record_icon" />
 
             <ImageButton
                 android:id="@+id/btnSave"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="83dp"
+                android:layout_height="83dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/ic_recoder_reset" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:background="#f3ab4d"
-            android:gravity="center"
-            android:text="保存"
-            android:textColor="#ffffff"
-            android:textSize="16sp" />
+                android:background="@drawable/record_end_icon" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <!-- 播放页 -->
@@ -98,7 +87,7 @@
         android:layout_width="300dp"
         android:layout_height="350dp"
         android:layout_gravity="center"
-        android:background="@drawable/record_border">
+        android:background="@drawable/record_border" >
 
         <ImageView
             android:id="@+id/ivAudition"
@@ -115,7 +104,7 @@
             android:layout_below="@id/ivAudition"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:gravity="center">
+            android:gravity="center" >
 
             <Chronometer
                 android:id="@+id/chAudition"
@@ -138,7 +127,7 @@
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:gravity="center">
+            android:gravity="center" >
 
             <TextView
                 android:id="@+id/tvReRecord"
