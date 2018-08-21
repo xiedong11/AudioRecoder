@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">zhl-android-record</string>
+
+    <string name="record_tip1">请点击开始录音哦！</string>
+    <string name="record_tip2">录音时间太短哦！</string>
+    <string name="work_rerecord">重录</string>
+    <string name="work_save">保存</string>
+</resources>

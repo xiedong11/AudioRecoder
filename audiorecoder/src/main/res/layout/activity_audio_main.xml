@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44000000"
+    tools:context=".AudioMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="bottom"
+        android:background="#ffffff">
+
+
+        <TextView
+            android:id="@+id/tv_audio_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="错音分析" />
+
+        <ImageView
+            android:id="@+id/iv_audio_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_audio_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_audio_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="00:00/05:000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_audio_time"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_audio_stop"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_audio_start"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_audio_reset"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_audio_save"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f3ab4d"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</FrameLayout>
