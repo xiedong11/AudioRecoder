@@ -1,1 +1,1 @@
-include ':app', ':audiorecoder', ':zhl-android-recoder', ':myapplication', ':recoder2'
+include ':app', ':audiorecoder', ':zhl-android-recoder', 'lib-recoder'
