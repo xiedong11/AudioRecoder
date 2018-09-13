@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bth_audio_recoder).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(MainActivity.this, com.tfedu.record.MainActivity.class));
             }
         });

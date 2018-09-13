@@ -32,7 +32,8 @@ public class RecordLayout extends ViewSwitcher implements OnClickListener {
     private Context mContext;
     private ImageButton btnPause, btnSave;
     private Chronometer chRecord, chAudition;
-    private TextView tvReRecord, tvUpload, tvTotalTime;
+    private TextView tvUpload, tvTotalTime;
+    private ImageView tvReRecord;
     private long recordingTime = 0;// 记录下来的总时间
     private boolean isPause = true;
     private MP3Recorder recorder;
@@ -84,13 +85,12 @@ public class RecordLayout extends ViewSwitcher implements OnClickListener {
                     }
                 });
         chAudition = (Chronometer) view.findViewById(R.id.chAudition);
-        ivRecord = (ImageView) view.findViewById(R.id.ivRecord);
         ivAudition = (ImageView) view.findViewById(R.id.ivAudition);
         ivAudition.setOnClickListener(this);
         tvTotalTime = (TextView) view.findViewById(R.id.tvTotalTime);
         tvUpload = (TextView) view.findViewById(R.id.tvUpload);
         tvUpload.setOnClickListener(this);
-        tvReRecord = (TextView) view.findViewById(R.id.tvReRecord);
+        tvReRecord = (ImageView) view.findViewById(R.id.tvReRecord);
         tvReRecord.setOnClickListener(this);
 
         initVoiceAnimRes();
@@ -129,17 +129,17 @@ public class RecordLayout extends ViewSwitcher implements OnClickListener {
                 }
                 isPause = false;
                 startTime(chRecord);
-                btnPause.setBackgroundResource(R.drawable.record_pause_icon);
+                btnPause.setBackgroundResource(R.drawable.ic_recoder_stop);
             } else {
                 isPause = true;
                 recorder.pause();
                 pauseTime(chRecord);
-                btnPause.setBackgroundResource(R.drawable.record_play_icon);
+                btnPause.setBackgroundResource(R.drawable.ic_recoder_start);
             }
 
         } else if (i == R.id.tvReRecord) {
             isPause = true;
-            btnPause.setBackgroundResource(R.drawable.record_icon);
+            btnPause.setBackgroundResource(R.drawable.ic_recoder_play);
             voiceSwitcher.setDisplayedChild(0);
             stopTime(chAudition);
             stopTime(chRecord);
@@ -250,7 +250,6 @@ public class RecordLayout extends ViewSwitcher implements OnClickListener {
                     } else {
                         value = 4;
                     }
-                    ivRecord.setImageDrawable(drawable_Anims[value]);
                 }
                 super.handleMessage(msg);
             }

@@ -16,11 +16,6 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
                 MainActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
